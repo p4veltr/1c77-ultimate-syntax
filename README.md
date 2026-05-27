@@ -1,7 +1,7 @@
 *Заменить %username% на имя пользователя, чтобы был правильный путь.*
 
-Добавить в C:\Users\%username%\.cursor\extensions  
-Прописать в C:\Users\%username%\.cursor\extensions\extensions.json:
+Добавить в C:\Users\\%username%\\.cursor\extensions  
+Прописать в C:\Users\\%username%\\.cursor\extensions\extensions.json:
 
 ```json
 {
