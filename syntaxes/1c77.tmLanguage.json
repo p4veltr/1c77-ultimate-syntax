@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "1C 7.7 Ultimate",
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#strings" },
+		{ "include": "#global-functions" },
+		{ "include": "#keywords" },
+		{ "include": "#v77-objects" },
+		{ "include": "#vk-objects" }
+	],
+	"repository": {
+		"comments": {
+			"match": "//.*$",
+			"name": "comment.line.double-slash.1c77"
+		},
+		"strings": {
+			"begin": "\"",
+			"end": "\"",
+			"name": "string.quoted.double.1c77",
+			"patterns": [
+				{
+					"match": "(?i)\\b(SELECT|FROM|WHERE|GROUP BY|ORDER BY|HAVING|INNER JOIN|LEFT JOIN|ON|AND|OR|IN|AS|INSERT|UPDATE|DELETE)\\b",
+					"name": "keyword.other.sql.1c77"
+				}
+			]
+		},
+		"global-functions": {
+			"match": "\\b(гл[A-Za-zА-Яа-я0-9_]+)\\b",
+			"name": "entity.name.function.global.1c77"
+		},
+		"keywords": {
+			"match": "(?i)\\b(Если|Тогда|ИначеЕсли|Иначе|КонецЕсли|Для|По|Цикл|КонецЦикла|Процедура|Функция|КонецПроцедуры|КонецФункции|Перем|Возврат|И|ИЛИ|НЕ|Попытка|Исключение|КонецПопытки)\\b",
+			"name": "keyword.control.1c77"
+		},
+		"v77-objects": {
+			"match": "(?i)\\b(СоздатьОбъект|ТаблицаЗначений|СписокЗначений|Справочник|Документ|Регистр|Перечисление|Запрос|Таблица|Контекст|ПустоеЗначение|СтатусВозврата|ТипЗначенияСтр)\\b",
+			"name": "support.class.v77.1c77"
+		},
+		"vk-objects": {
+			"match": "(?i)\\b(ODBCRecordset|MetaDataWork|ИндексированнаяТаблица|Сервис|РасширениеФормы|ТабличныйДокумент|Йоксель|РегулярныеВыражения)\\b",
+			"name": "support.class.vk.1c77"
+		}
+	},
+	"scopeName": "source.1c77"
+}

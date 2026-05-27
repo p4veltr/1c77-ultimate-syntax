@@ -1,0 +1,37 @@
+{
+	"name": "1c77-ultimate-syntax",
+	"displayName": "1C 7.7 Ultimate Syntax",
+	"description": "Подсветка 1С 7.7, 1C++, FormEx и Yoksel со структурой модуля",
+	"version": "1.0.1",
+	"publisher": "pavel",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"main": "./extension.js",
+	"activationEvents": [
+		"onLanguage:1c77"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "1c77",
+				"aliases": [
+					"1C 7.7",
+					"1c77"
+				],
+				"extensions": [
+					".1s",
+					".frm"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "1c77",
+				"scopeName": "source.1c77",
+				"path": "./syntaxes/1c77.tmLanguage.json"
+			}
+		]
+	}
+}
