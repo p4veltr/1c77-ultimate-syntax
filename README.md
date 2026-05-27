@@ -6,7 +6,7 @@
 ```json
 {
         "identifier": {
-            "id": "pavel.1c77-ultimate-syntax"
+            "id": "p4veltr.1c77-ultimate-syntax"
         },
         "version": "1.0.0",
         "location": {
